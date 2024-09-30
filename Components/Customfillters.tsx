@@ -1,40 +1,61 @@
 "use client"
 
-import React from 'react'
-import { useState , Fragment } from 'react' 
-import Image from 'next/image'
-import {Listbox , Transition} from '@headlessui/react'
-import { CustomfilterProps } from './types'
-import { useRouter } from "next/navigation";
-import { updateSearchPrams } from '@/utils'
+import React, { useState } from 'react';
+import Image from 'next/image';
+import { CustomfilterProps } from './types';
 
+const CustomFilters = ({ title, options, setFilter }: CustomfilterProps) => {
+  const [selected, setSelected] = useState(options[0]);
+  const [isOpen, setIsOpen] = useState(false);
 
+  const handleSelect = (option:any) => {
+    setSelected(option);
+    setFilter(option.value);
+    setIsOpen(false);
+  };
 
-const Customfillters = ({title , options , setFilter}:CustomfilterProps) => {
-  const [selected, setselected] =useState(options[0])
-  
   return (
-    <div className='w-fit'>
-      <Listbox value={selected} onChange={(e) => {
-        setselected(e)
-        setFilter(e.value)
-        }} >
-      <div className='relative w-fit z-10'>
-        <Listbox.Button className='custom-filter__btn'>
-          <span className='block truncate'>{selected.title}</span>
-          <Image src="chevron-up-down.svg" width={20} height={20} alt='chevron up and down' className='ml-4 object-contain'/>
-        </Listbox.Button>
-        <Transition as={Fragment} leave='transition ease-in duration-100' leaveFrom='opacity-100' leaveTo='opacity-0'>
-          <Listbox.Options className='custom-filter__options'>
+    <div className="w-fit">
+      <div className="relative w-fit z-10">
+        <button
+          className="custom-filter__btn"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <span className="block truncate">{selected.title}</span>
+          <Image
+            src="chevron-up-down.svg"
+            width={20}
+            height={20}
+            alt="chevron up and down"
+            className="ml-4 object-contain"
+          />
+        </button>
+        {isOpen && (
+          <div className="custom-filter__options absolute mt-1 w-full bg-white shadow-lg max-h-60 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm">
             {options.map((op) => (
-            <Listbox.Option key={op.title} value={op} className={({active} ) => `relative cursor-default select-none py-2 px-4 ${active ? 'bg-primary-blue text-white' : 'text-gray-900'}`}>{({selected}) => (<span className={`block truncate ${selected ? 'font-medium' : 'font-normal'}`}>{op.title}</span>)}</Listbox.Option>
+              <div
+                key={op.title}
+                onClick={() => handleSelect(op)}
+                className={`relative cursor-default select-none py-2 px-4 ${
+                  selected.title === op.title
+                    ? 'bg-primary-blue text-white'
+                    : 'text-gray-900'
+                }`}
+              >
+                <span
+                  className={`block truncate ${
+                    selected.title === op.title ? 'font-medium' : 'font-normal'
+                  }`}
+                >
+                  {op.title}
+                </span>
+              </div>
             ))}
-          </Listbox.Options>
-        </Transition>
+          </div>
+        )}
       </div>
-      </Listbox>
     </div>
-  )
-} 
+  );
+};
 
-export default Customfillters
+export default CustomFilters;
