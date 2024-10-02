@@ -8,8 +8,7 @@ import Showmore from "@/Components/Showmore";
 import { fuels, yearsOfProduction } from "@/constants";
 import { fetchCars } from "@/utils";
 import Image from "next/image";
-import { filltersProps } from "@/Components/types";
-import { log } from "console";
+
 
 
 export default  function Home() {
@@ -49,7 +48,6 @@ useEffect(() => {
 }, [fuel, year , limit , manufacturer , model])
   
   
-  const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars 
   return (
     <main className="overflow-hidden">
       <Hero />
