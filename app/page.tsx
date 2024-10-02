@@ -8,6 +8,7 @@ import Showmore from "@/Components/Showmore";
 import { fuels, yearsOfProduction } from "@/constants";
 import { fetchCars } from "@/utils";
 import Image from "next/image";
+import Navbar from "@/Components/Navbar";
 
 
 
@@ -47,10 +48,11 @@ useEffect(() => {
   getCars();
 }, [fuel, year , limit , manufacturer , model])
   
-  
+
   return (
+    <>
+<Navbar />
     <main className="overflow-hidden">
-      <Navbar />
       <Hero />
 
       <div className='mt-12 padding-x padding-y max-width ' id='discover'>
@@ -91,5 +93,6 @@ useEffect(() => {
       </div>
     
     </main>
+    </>
   );
 }
