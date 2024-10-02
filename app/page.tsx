@@ -50,6 +50,7 @@ useEffect(() => {
   
   return (
     <main className="overflow-hidden">
+      <Navbar />
       <Hero />
 
       <div className='mt-12 padding-x padding-y max-width ' id='discover'>
