@@ -37,6 +37,33 @@
 }
 /* END: General styles */
 
+/* START: Header styles */
+header {
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+}
+
+nav {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+@media (min-width: 640px) {
+  nav {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+/* END: Header styles */
+
 /* START: Hero styles */
 .hero {
   @apply flex xl:flex-row flex-col gap-5 relative z-0 max-w-[1440px] mx-auto;
