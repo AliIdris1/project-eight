@@ -7,10 +7,10 @@ const Navbar = () => {
   return (
     <header>
         <nav>
-            <Link href={"/"} className='flex justify-center items-center'>
-                <Image src={"/logo.svg"} width={118} height={18} className='object-contain' alt='logo'/>
+            <Link href={"/"} className='first-link'>
+                <Image src={"/logo.svg"} width={118} height={18} className='image' alt='logo'/>
             </Link>
-            <CustomButton title='Sign in' containerstyles='text-primary-blue rounded-full bg-white min-w-[130px]' btntybe='button'  />
+            <CustomButton title='Sign in' containerstyles='nav-btn' btntybe='button'  />
         </nav>
     </header>
   )
