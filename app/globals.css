@@ -84,6 +84,25 @@ nav {
     padding-right: 64px;
   }
 }
+
+nav .first-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav .first-link .image {
+  object-fit: contain;
+}
+
+.nav-btn {
+  --tw-text-opacity: 1;
+    color: rgb(43 89 255 / var(--tw-text-opacity)) /* #2b59ff */;
+    border-radius: 9999px;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity)) /* #ffffff */;
+    min-width: 130px;
+}
 /* END: Header styles */
 
 /* START: Hero styles */
