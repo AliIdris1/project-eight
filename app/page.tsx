@@ -52,13 +52,13 @@ useEffect(() => {
   return (
     <>
 <Navbar />
-    <main className="overflow-hidden">
+    <main>
       <Hero />
 
       <div className='after-hero padding-x padding-y max-width ' id='discover'>
         <div className='home__text-container'>
-            <h1 className='text-4xl font-extrabold'>Car Catalogue</h1>
-            <p className='font-extralight'>Explore the cars you might like</p>
+            <h1>Car Catalogue</h1>
+            <p>Explore the cars you might like</p>
         </div>
         <div className='home__filters'>
             <Searchbar setmanufacturer={setmanufacturer} setmodel={setmodel}/>
