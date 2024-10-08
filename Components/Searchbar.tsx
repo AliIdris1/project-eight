@@ -11,8 +11,8 @@ import { url } from 'inspector'
 
 const SearchButton = ({Otherclass}:{Otherclass?: string}) => {
     return (
-        <button type='submit' className={`${Otherclass} -ml-3 z-10`}>
-            <Image src={"magnifying-glass.svg"}  alt='glass' width={40} height={40} className=' object-contain'/>
+        <button type='submit' className={`${Otherclass} search-btn`}>
+            <Image src={"magnifying-glass.svg"}  alt='glass' width={40} height={40} className=' image'/>
         </button>
     )
 }
@@ -51,7 +51,7 @@ return (
             <SearchButton Otherclass='sm:hidden' />
         </div>
         <div className='searchbar__item'>
-            <Image src={"/model-icon.png"} width={25} height={25} alt='model' className=' absolute h-[20px] w-[20px] ml-4'/>
+            <Image src={"/model-icon.png"} width={25} height={25} alt='model' className='image'/>
             <input type="text" name="model" className='searchbar__input ' placeholder='Tieguan' onChange={(e) => setSearchmodel(e.target.value)} value={Searchmodel} />
             <SearchButton Otherclass='sm:hidden' />
         </div>
