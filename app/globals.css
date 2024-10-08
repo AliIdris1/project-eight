@@ -379,9 +379,18 @@ nav .first-link .image {
   margin-left: 1rem /* 16px */;
 }
 
+@media (min-width: 640px) {
+  .searchbar__item .search-btn {
+    display: none;
+  }
+}
+
 @media not all and (min-width: 640px) {
   .searchbar__item {
     width: 100%;
+  }
+  .searchbar__item .max-search-btn {
+    display: none;
   }
 }
 
@@ -403,8 +412,9 @@ nav .first-link .image {
 @media not all and (min-width: 640px) {
   .searchbar__input {
     border-radius: 9999px;
-
   }
+
+  
 }
 /* END: searchbar styles */
 
