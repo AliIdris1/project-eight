@@ -103,6 +103,15 @@ nav .first-link .image {
     background-color: rgb(255 255 255 / var(--tw-bg-opacity)) /* #ffffff */;
     min-width: 130px;
 }
+
+.search-btn {
+  margin-left: -0.75rem /* -12px */;
+  z-index: 10;
+}
+
+.search-btn .image {
+  object-fit: contain;
+}
 /* END: Header styles */
 
 /* START: Hero styles */
@@ -216,7 +225,13 @@ nav .first-link .image {
 }
 
 .home__filters {
-  @apply mt-12 w-full flex-between items-center flex-wrap gap-5;
+  margin-top: 3rem /* 48px */;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.25rem /* 20px */;
 }
 
 .home__filter-container {
@@ -334,15 +349,62 @@ nav .first-link .image {
 
 /* START: searchbar styles */
 .searchbar {
-  @apply flex items-center justify-start max-sm:flex-col w-full relative max-sm:gap-4 max-w-3xl;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  position: relative;
+  max-width: 48rem /* 768px */;
+}
+
+@media not all and (min-width: 640px) {
+  .searchbar {
+    gap: 1rem /* 16px */;
+    flex-direction: column;
+  }
 }
 
 .searchbar__item {
-  @apply flex-1 max-sm:w-full flex justify-start items-center relative;
+  flex: 1 1 0%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+.searchbar__item .image {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  margin-left: 1rem /* 16px */;
+}
+
+@media not all and (min-width: 640px) {
+  .searchbar__item {
+    width: 100%;
+  }
 }
 
 .searchbar__input {
-  @apply w-full h-[48px] pl-12 p-4 bg-light-white rounded-r-full max-sm:rounded-full outline-none cursor-pointer text-sm;
+  width: 100%;
+  height: 48px;
+  padding: 1rem /* 16px */;
+  padding-left: 3rem /* 48px */;
+  background-color: rgba(59,60,152,0.03);
+  border-top-right-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  cursor: pointer;
+  font-size: 0.875rem /* 14px */;
+  line-height: 1.25rem /* 20px */;
+}
+
+@media not all and (min-width: 640px) {
+  .searchbar__input {
+    border-radius: 9999px;
+
+  }
 }
 /* END: searchbar styles */
 
