@@ -13,17 +13,26 @@
 
 /* START: General styles */
 .max-width {
-  @apply max-w-[1440px] mx-auto;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .padding-x {
   padding-left: 1.5rem /* 24px */;
   padding-right: 1.5rem /* 24px */;
-  @apply sm:px-16 px-6;
+}
+
+@media (min-width: 640px) {
+  .padding-x {
+    padding-left: 4rem /* 64px */;
+    padding-right: 4rem /* 64px */;
+  } 
 }
 
 .padding-y {
-  @apply py-4;
+  padding-top: 1rem /* 16px */;
+  padding-bottom: 1rem /* 16px */;
 }
 
 .flex-center {
@@ -56,6 +65,10 @@
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity)) /* #ffffff */;
     }
+
+.after-hero {
+  margin-top: 3rem /* 48px */;
+}
 /* END: General styles */
 
 
