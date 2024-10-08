@@ -462,6 +462,19 @@ nav .first-link .image {
   align-items: center;
 }
 
+.search-manufacturer div {
+  position: relative;
+  width: 100%;
+}
+
+.search-manufacturer div button {
+  position: absolute;
+  top: 14px;
+}
+
+.image-diff {
+  margin-left: 1rem /* 16px */;
+}
 @media not all and (min-width: 640px) {
   .search-manufacturer {
     width: 100%;
