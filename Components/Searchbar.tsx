@@ -48,14 +48,14 @@ return (
             selected={Searchmanufacturer}
             setselected={setSearchmanufacturer}
             />
-            <SearchButton Otherclass='sm:hidden' />
+            <SearchButton Otherclass='search-btn' />
         </div>
         <div className='searchbar__item'>
             <Image src={"/model-icon.png"} width={25} height={25} alt='model' className='image'/>
             <input type="text" name="model" className='searchbar__input ' placeholder='Tieguan' onChange={(e) => setSearchmodel(e.target.value)} value={Searchmodel} />
-            <SearchButton Otherclass='sm:hidden' />
+            <SearchButton Otherclass='search-btn' />
         </div>
-        <SearchButton Otherclass='max-sm:hidden' />
+        <SearchButton Otherclass='max-search-btn' />
     </form>
 )
 }
