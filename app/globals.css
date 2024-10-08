@@ -235,6 +235,11 @@ nav .first-link .image {
 }
 
 .home__filter-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem /* 8px */;
   @apply flex justify-start flex-wrap items-center gap-2;
 }
 
