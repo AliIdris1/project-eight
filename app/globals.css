@@ -240,7 +240,6 @@ nav .first-link .image {
   flex-wrap: wrap;
   align-items: center;
   gap: 0.5rem /* 8px */;
-  @apply flex justify-start flex-wrap items-center gap-2;
 }
 
 .home__cars-wrapper {
