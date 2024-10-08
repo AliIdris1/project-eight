@@ -13,9 +13,9 @@ const SearchManufacturer = ({ selected, setselected }: any) => {
 
   return (
     <div className="search-manufacturer">
-      <div className="relative w-full">
-        <button className="absolute top-[14px]">
-          <Image src="/car-logo.svg" width={20} height={20} alt="car-logo" className="ml-4" />
+      <div>
+        <button>
+          <Image src="/car-logo.svg" width={20} height={20} alt="car-logo" className="image-diff" />
         </button>
         <input
           className="search-manufacturer__input"
