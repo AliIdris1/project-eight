@@ -10,6 +10,9 @@
   box-sizing: border-box;
   font-family: "Manrope", sans-serif;
 }
+main {
+  overflow: hidden;
+}
 
 /* START: General styles */
 .max-width {
@@ -234,7 +237,23 @@ nav .first-link .image {
 /* START: Home styles */
 
 .home__text-container {
-  @apply flex flex-col items-start justify-start gap-y-2.5 text-black-100;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  row-gap: 0.625rem /* 10px */;
+  --tw-text-opacity: 1;
+  color: rgb(43 44 53 / var(--tw-text-opacity)) /* #2b2c35 */;
+}
+
+.home__text-container p {
+  font-weight: 200;
+}
+
+.home__text-container h1 {
+  font-size: 2.25rem /* 36px */;
+  line-height: 2.5rem /* 40px */;
+  font-weight: 800;
 }
 
 .home__filters {
