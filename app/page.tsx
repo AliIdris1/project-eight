@@ -50,8 +50,8 @@ useEffect(() => {
   
 
   return (
-  
-
+    <>
+<Navbar />
     <main className="overflow-hidden">
       <Hero />
 
@@ -93,5 +93,6 @@ useEffect(() => {
       </div>
     
     </main>
+    </>
   );
 }
