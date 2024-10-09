@@ -24,7 +24,7 @@ const SearchManufacturer = ({ selected, setselected }: any) => {
           onChange={(e) => setQuery(e.target.value)}
         />
         {query && (
-          <div className="absolute mt-1 w-full bg-white shadow-lg max-h-60 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm">
+          <div className="query">
             {filteredManufacturers.map((item) => (
               <div
                 key={item}
@@ -32,13 +32,20 @@ const SearchManufacturer = ({ selected, setselected }: any) => {
                   setselected(item);
                   setQuery('');
                 }}
-                className={`relative cursor-default select-none py-2 px-4 ${
-                  selected === item ? 'bg-primary-blue text-white' : 'text-gray-900'
-                }`}
+                
               >
-                <span className={`block truncate ${selected === item ? 'font-medium' : 'font-normal'}`}>
-                  {item}
-                </span>
+                <span
+  style={{
+    display: 'block',
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    fontWeight: selected === item ? '500' : '400',
+  }}
+>
+  {item}
+</span>
+
               </div>
             ))}
           </div>
