@@ -51,7 +51,6 @@ useEffect(() => {
 
   return (
     <>
-<Navbar />
     <main>
       <Hero />
 
