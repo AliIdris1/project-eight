@@ -3,8 +3,9 @@ import { Carprops , filltersProps } from "@/Components/types";
 
 export async function fetchCars(fillters:filltersProps) {
   const {manufacturer , year , model , limit ,fuel} =  fillters ;
+  const Key = process.env.NEXT_PUBLIC_KEY
 const header = {
-    'X-RapidAPI-Key': 'f3d261b412msh1f57a16a193f235p1c7eaejsnd4eb1342e487',
+    'X-RapidAPI-Key': Key || 'a',
 		'X-RapidAPI-Host': 'cars-by-api-ninjas.p.rapidapi.com'
     }
 
